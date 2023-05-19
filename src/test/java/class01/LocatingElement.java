@@ -19,7 +19,7 @@ public class LocatingElement {
         Thread.sleep(2000);
         String currentUrl=driver.getCurrentUrl();
         System.out.println(currentUrl);
-        String title=driver.getTitle();
+        String title=driver.getTitle();// to get titleinside Document object model we click on ctrl f
         System.out.println(title);
         driver.quit();
     }
