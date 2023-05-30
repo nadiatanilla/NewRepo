@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Task2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/input-form-demo.php");
@@ -18,13 +18,13 @@ public class Task2 {
                last .sendKeys("Chak");
 
           WebElement email=     driver.findElement(By.cssSelector("input[name='email']"));
-          email.sendKeys("nana.cha@gmail.com");
+          email.sendKeys("nadia.chakouch21@gmail.com");
 
          WebElement phone= driver.findElement(By.cssSelector("input[name='phone']"));
-         phone.sendKeys("223-45-76");
+         phone.sendKeys("5712763467");
 
          WebElement adress=driver.findElement(By.cssSelector("input[name='address']"));
-         adress.sendKeys("123 USA");
+         adress.sendKeys("123 N Ripley st USA");
 
          WebElement city=driver.findElement(By.cssSelector("input[name='city']"));
          city.sendKeys("Alexandria");
@@ -44,6 +44,7 @@ public class Task2 {
 
          driver.findElement(By.cssSelector("textarea[name='comment']")).sendKeys("Good project");
 
-         driver.findElement(By.cssSelector("button[type='submit']")).click();
+         driver.findElement(By.cssSelector("button[class*='btn btn']")).click();
+         Thread.sleep(2000);
     }
 }
