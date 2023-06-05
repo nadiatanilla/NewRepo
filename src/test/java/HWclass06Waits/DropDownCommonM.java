@@ -1,4 +1,4 @@
-package Utils;
+package HWclass06Waits;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,9 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import java.time.Duration;
-
-public class CommonMethods {
+public class DropDownCommonM {
     public static WebDriver driver;
 
     public static void openBrowserAndLaunchApplication(String url, String browser) {
@@ -24,10 +22,10 @@ public class CommonMethods {
         // driver=new ChromeDriver();
         driver.get(url);
         //  driver.manage().window().maximize();
-      //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
     }
-    public static void selectByValue(String byValue,WebElement element){
+    public static void selectByValue(String byValue, WebElement element){
         Select sel=new Select(element);
         sel.selectByValue(byValue);
     }
