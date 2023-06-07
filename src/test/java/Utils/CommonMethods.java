@@ -24,7 +24,7 @@ public class CommonMethods {
         // driver=new ChromeDriver();
         driver.get(url);
         //  driver.manage().window().maximize();
-      //  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
     }
     public static void selectByValue(String byValue,WebElement element){
