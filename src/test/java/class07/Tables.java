@@ -18,6 +18,7 @@ public class Tables  extends CommonMethods {
 
         // print all the rows of the table
       List<WebElement>allRows= driver.findElements(By.xpath("//table[@id='customers']/tbody/tr"));
+        System.out.println(allRows.size());
       for(WebElement row:allRows){
           String rowTexts=row.getText();
           if(rowTexts.contains("Google")){
@@ -26,6 +27,7 @@ public class Tables  extends CommonMethods {
         System.out.println("**************************Column Texts***********************");
       //print each and every data in the table
         List<WebElement>allcellData= driver.findElements(By.xpath("//table[@id='customers']/tbody/tr/td"));
+        System.out.println(allcellData.size());
       for(WebElement cell:allcellData){
           String cellTexts=cell.getText();
           System.out.println(cellTexts);
