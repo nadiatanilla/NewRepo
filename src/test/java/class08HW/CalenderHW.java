@@ -47,8 +47,9 @@ public class CalenderHW extends CommonMethods {
        WebElement calender2=driver.findElement(By.xpath("//input[@id='candidateSearch_toDate']"));
        calender2.click();
        WebElement month2= driver.findElement(By.xpath("//select[@class='ui-datepicker-month']"));
-       Select sel2=new Select(month2);
-       sel2.selectByVisibleText("Apr");
+      // Select sel2=new Select(month2);
+      // sel2.selectByVisibleText("Apr");
+        selectByVisibleText("Apr",month2);
 
   WebElement year2= driver.findElement(By.xpath("//select[@class='ui-datepicker-year']"));
        Select sel3=new Select(year2);
