@@ -19,15 +19,19 @@ public class DynamicTables2 extends CommonMethods {
         WebElement pimBtn = driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']"));
         pimBtn.click();
 
-        List<WebElement> listId=driver.findElements(By.xpath("//table/tbody/tr/td[2]"));
-        for(int i=0;i<listId.size();i++){
-            String id=listId.get(i).getText();
-                if(id.equals("53502A")){
-                    System.out.println("Click on the check box in row number "+(i+1));
-                    WebElement checkBox= driver.findElement(By.xpath("//table/tbody/tr["+(i+1)+"]/td[1]"));
-                    checkBox.click();
-                }
-            }
+           List<WebElement>  allIds=driver.findElements(By.xpath("//table/tbody/tr/td[2]"));
+           for(int i=0;i< allIds.size();++i){
+               String id=allIds.get(i).getText();
+               if(id.equals("654686")){
+                   System.out.println(" this id is on row number "+(i+1));
+         WebElement checkbox=driver.findElement(By.xpath("//table/tbody/tr["+(i+1)+"]/td[1]"));
+         if(!checkbox.isSelected()){
+             checkbox.click();
+         }
+
+               }
+           }
+
         }
     }
 

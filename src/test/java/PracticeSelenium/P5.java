@@ -18,6 +18,7 @@ public class P5 extends CommonMethods {
      while(!found){
          WebElement currentMonth=driver.findElement(By.xpath("//span[@class='ui-datepicker-month']"));
 
+
          String month=currentMonth.getText();
      if(month.equals("August")){
          System.out.println("This is the correct month");

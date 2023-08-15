@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class MultiSelect extends CommonMethods {
     public static void main(String[] args) {
 
@@ -19,7 +21,8 @@ public class MultiSelect extends CommonMethods {
         WebElement state= driver.findElement(By.xpath("//select[@name='States']"));
 //        2.create an object of the select class and pass in the parameters the element dropdown
         Select sel=new Select(state);
-
+        List<WebElement> values=sel.getOptions();
+        System.out.println(values.size());
 //        check if the dropdown  multiselect
         boolean isMul = sel.isMultiple();
         System.out.println("the drop down is multi select :"+isMul);
@@ -31,6 +34,7 @@ public class MultiSelect extends CommonMethods {
         sel.selectByIndex(7);
         // we have deselect method if we want to deselect one of the previous select
         sel.deselectByVisibleText("Ohio");
+
 
 
     }

@@ -23,7 +23,7 @@ public class DynamicTables extends CommonMethods {
 //        look for 56247A
         for(int i=0;i<allIDs.size();i++){
             String id = allIDs.get(i).getText();// WE need get i first
-            if(id.equals("56247A")){
+            if(id.equals("12334717")){
                 System.out.println("the id is on row number "+(i+1));
             }
 

@@ -16,7 +16,7 @@ public class CalenderHW extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {
         openBrowserAndLaunchApplication("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login", "chrome");
         WebElement userName=driver.findElement(By.id("txtUsername"));
-              userName.sendKeys("admin");
+              userName.sendKeys("Admin");
         WebElement pass=driver.findElement(By.id("txtPassword"));
                pass .sendKeys("Hum@nhrm123");
        WebElement logIn= driver.findElement(By.id("btnLogin"));
@@ -33,6 +33,7 @@ public class CalenderHW extends CommonMethods {
         WebElement year=driver.findElement(By.xpath("//select[@class='ui-datepicker-year']"));
         Select select=new Select(year);
         select.selectByValue("2009");
+        select.getOptions();
 
        List< WebElement> days=driver.findElements(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr/td"));
        for(WebElement element:days){
